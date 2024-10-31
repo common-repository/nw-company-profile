@@ -1,0 +1,427 @@
+@charset "UTF-8";
+/* line 3, settings.scss */
+.ui-tabs-active a {
+  background-color: #f1f1f1; }
+
+/*-----------------------------------
+
+基本情報の設定
+
+-----------------------------------*/
+/* line 13, settings.scss */
+.profile_box {
+  display: inline-block;
+  display: flex;
+  width: 100%;
+  margin: 0 auto; }
+
+/* line 20, settings.scss */
+#subTitle_area {
+  width: 200px;
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 10px; }
+
+/* line 27, settings.scss */
+#input_area {
+  background: #f1f1f1;
+  width: 100%; }
+
+/* line 32, settings.scss */
+.company_profile,
+.profile_title {
+  display: inline-block;
+  display: flex;
+  border-bottom: #eee solid 1px;
+  margin: 0;
+  width: 100%;
+  background-color: #fff; }
+
+/* line 43, settings.scss */
+.company_profile:last-child {
+  border-bottom: 0; }
+/* line 46, settings.scss */
+.company_profile:active {
+  /*ドラッグ&ドロップ操作中時の設定*/
+  background: #fffef4; }
+
+/* line 52, settings.scss */
+.ui-sortable-handle {
+  cursor: move; }
+
+/* line 56, settings.scss */
+.slug,
+.slug_title {
+  border-right: #eee solid 1px;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  /*上下センターに*/
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 20px 0; }
+
+/* line 69, settings.scss */
+.contents,
+.contents_title {
+  /*上下センターに*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border-right: #eee solid 1px;
+  padding: 20px 0;
+  flex: 5; }
+
+/* line 81, settings.scss */
+.textarea_type,
+.company_profile input[type="text"] {
+  display: inline-block;
+  width: calc(100% - 30px); }
+
+/* line 87, settings.scss */
+.profile_title {
+  background: #e5e5e5;
+  display: inline-block;
+  display: flex;
+  height: 3em;
+  width: 100%;
+  margin: 0 auto; }
+  /* line 94, settings.scss */
+  .profile_title:first-child {
+    margin-top: 1em; }
+
+/* line 99, settings.scss */
+.delete_title {
+  padding: 0 15px;
+  width: 50px;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  /* line 108, settings.scss */
+  .delete_title input[type="checkbox"] {
+    margin: 0 4px 0 0; }
+
+/* line 113, settings.scss */
+.label,
+.label_title,
+.draft .label {
+  border-right: #eee solid 1px;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  /*上下センターに*/
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  padding: 20px 0; }
+
+/* line 127, settings.scss */
+.blank_area {
+  /*空白行の設定*/
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  width: 50px; }
+
+/*ナビのタブ切り替え設定*/
+/* line 140, settings.scss */
+.ui-tabs-nav {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding-top: 9px;
+  padding-bottom: 0;
+  line-height: inherit; }
+
+/* line 149, settings.scss */
+.ui-tabs-anchor {
+  display: block;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  margin-left: 0.5em;
+  margin-bottom: -1px;
+  padding: 3px 10px;
+  font-size: 14px;
+  line-height: 1.71428571;
+  font-weight: 600;
+  background: #e5e5e5;
+  color: #555;
+  text-decoration: none;
+  white-space: nowrap; }
+  /* line 163, settings.scss */
+  .ui-tabs-anchor:active, .ui-tabs-anchor:focus, .ui-tabs-anchor:focus:active, .ui-tabs-anchor:after {
+    border-bottom: 1px solid #f1f1f1;
+    background: #f1f1f1;
+    color: #000;
+    box-shadow: 0;
+    outline: 0; }
+  /* line 173, settings.scss */
+  .ui-tabs-anchor:focus {
+    box-shadow: none; }
+
+/* line 178, settings.scss */
+.ui-state-default {
+  margin-bottom: 0; }
+
+/*追加フォームエリアの設定*/
+/* line 184, settings.scss */
+.check_all_area {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  width: 50px;
+  position: relative; }
+  /* line 193, settings.scss */
+  .check_all_area input[type="checkbox"] {
+    margin-top: 0; }
+  /* line 196, settings.scss */
+  .check_all_area #text {
+    display: none; }
+
+/* line 201, settings.scss */
+.trash-icon {
+  font-size: 16px;
+  font-weight: 900;
+  content: "\f2ed";
+  color: #c0c0c0;
+  padding-left: 2px;
+  padding-bottom: 2px; }
+
+/*追加フォームボタンの設定*/
+/* line 213, settings.scss */
+.draft .slug {
+  display: block;
+  align-self: center;
+  border: 0; }
+/* line 218, settings.scss */
+.draft .contents {
+  padding: 20px 0;
+  border-left: #eee solid 1px; }
+/* line 222, settings.scss */
+.draft:active {
+  /* ドラッグ&ドロップ操作中時の設定をリセット */
+  background: #fff; }
+
+/* line 228, settings.scss */
+.add_area {
+  position: relative; }
+
+/* line 232, settings.scss */
+.btn_box {
+  position: absolute;
+  padding-top: 8px;
+  padding-left: 10px;
+  border-top: 1px solid #ccc;
+  border-top: 1px solid #eee;
+  width: 100%; }
+
+/* line 241, settings.scss */
+.add_form_btn,
+.rm_form_btn {
+  position: relative;
+  width: 30px; }
+  /* line 245, settings.scss */
+  .add_form_btn input,
+  .rm_form_btn input {
+    visibility: hidden;
+    display: inline-block;
+    cursor: pointer; }
+
+/* line 253, settings.scss */
+.add_form_btn::after {
+  display: inline-block;
+  position: absolute;
+  left: 7px;
+  top: 0;
+  font-family: "Font Awesome 5 Free";
+  content: "\f055";
+  font-weight: 900;
+  color: #9a9a9a;
+  font-size: 14px; }
+/* line 264, settings.scss */
+.add_form_btn:hover::after {
+  color: #444; }
+
+/* line 270, settings.scss */
+.rm_form_btn::after {
+  display: inline-block;
+  position: absolute;
+  left: 3px;
+  top: 0;
+  font-family: "Font Awesome 5 Free";
+  content: "\f057";
+  font-weight: 900;
+  color: #9a9a9a;
+  font-size: 14px; }
+/* line 281, settings.scss */
+.rm_form_btn:hover::after {
+  color: #444; }
+
+/* line 286, settings.scss */
+.draft_label,
+.draft_slug,
+.draft_contents {
+  margin-top: 20px; }
+
+/* line 292, settings.scss */
+input .draft_slug {
+  display: flex; }
+
+/* line 296, settings.scss */
+.notice {
+  /*同スラッグアラート*/
+  display: inline-block;
+  padding: 8px 8px;
+  margin: 0;
+  background-color: #ca4a1f;
+  color: #fff;
+  font-weight: 600;
+  border: 0;
+  margin-top: 0;
+  text-align: center;
+  width: calc(100% - 45px); }
+  /* line 308, settings.scss */
+  .wrap .notice {
+    margin: 0; }
+
+/*-----------------------------------
+
+グループの作成・編集
+
+-----------------------------------*/
+/* line 319, settings.scss */
+#tabs-create-group,
+#tabs-edit-group {
+  width: calc(100% - 40px);
+  position: relative;
+  padding: 20px;
+  max-width: 1200px; }
+  /* line 325, settings.scss */
+  #tabs-create-group #select_group_form,
+  #tabs-edit-group #select_group_form {
+    position: absolute;
+    top: 20px;
+    right: 20px; }
+  /* line 331, settings.scss */
+  #tabs-create-group .group_header .group_inner,
+  #tabs-edit-group .group_header .group_inner {
+    height: 30px;
+    margin-bottom: 8px; }
+    /* line 334, settings.scss */
+    #tabs-create-group .group_header .group_inner span,
+    #tabs-edit-group .group_header .group_inner span {
+      padding-right: 20px; }
+    /* line 337, settings.scss */
+    #tabs-create-group .group_header .group_inner .notice,
+    #tabs-edit-group .group_header .group_inner .notice {
+      display: inline;
+      margin-left: 20px; }
+    /* line 341, settings.scss */
+    #tabs-create-group .group_header .group_inner span.no_input,
+    #tabs-edit-group .group_header .group_inner span.no_input {
+      padding-left: 10px; }
+  /* line 346, settings.scss */
+  #tabs-create-group #input_area_create_group,
+  #tabs-create-group #input_area_group_edit,
+  #tabs-edit-group #input_area_create_group,
+  #tabs-edit-group #input_area_group_edit {
+    height: 55vh;
+    width: 100%;
+    margin-top: 30px;
+    display: flex; }
+    /* line 352, settings.scss */
+    #tabs-create-group #input_area_create_group .group_items_arrow,
+    #tabs-create-group #input_area_group_edit .group_items_arrow,
+    #tabs-edit-group #input_area_create_group .group_items_arrow,
+    #tabs-edit-group #input_area_group_edit .group_items_arrow {
+      height: 100%;
+      flex: 1;
+      max-width: 50px;
+      font-size: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #444;
+      padding: 0 20px; }
+    /* line 363, settings.scss */
+    #tabs-create-group #input_area_create_group .group_items_left,
+    #tabs-create-group #input_area_create_group .group_items_right,
+    #tabs-create-group #input_area_group_edit .group_items_left,
+    #tabs-create-group #input_area_group_edit .group_items_right,
+    #tabs-edit-group #input_area_create_group .group_items_left,
+    #tabs-edit-group #input_area_create_group .group_items_right,
+    #tabs-edit-group #input_area_group_edit .group_items_left,
+    #tabs-edit-group #input_area_group_edit .group_items_right {
+      height: 100%;
+      flex: 2; }
+      /* line 367, settings.scss */
+      #tabs-create-group #input_area_create_group .group_items_left p.group_title,
+      #tabs-create-group #input_area_create_group .group_items_right p.group_title,
+      #tabs-create-group #input_area_group_edit .group_items_left p.group_title,
+      #tabs-create-group #input_area_group_edit .group_items_right p.group_title,
+      #tabs-edit-group #input_area_create_group .group_items_left p.group_title,
+      #tabs-edit-group #input_area_create_group .group_items_right p.group_title,
+      #tabs-edit-group #input_area_group_edit .group_items_left p.group_title,
+      #tabs-edit-group #input_area_group_edit .group_items_right p.group_title {
+        height: 40px;
+        width: 100%;
+        background-color: #e5e5e5;
+        display: flex;
+        margin: 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center; }
+      /* line 377, settings.scss */
+      #tabs-create-group #input_area_create_group .group_items_left ul.sortable_box,
+      #tabs-create-group #input_area_create_group .group_items_right ul.sortable_box,
+      #tabs-create-group #input_area_group_edit .group_items_left ul.sortable_box,
+      #tabs-create-group #input_area_group_edit .group_items_right ul.sortable_box,
+      #tabs-edit-group #input_area_create_group .group_items_left ul.sortable_box,
+      #tabs-edit-group #input_area_create_group .group_items_right ul.sortable_box,
+      #tabs-edit-group #input_area_group_edit .group_items_left ul.sortable_box,
+      #tabs-edit-group #input_area_group_edit .group_items_right ul.sortable_box {
+        height: calc(100% - 80px);
+        width: 100%;
+        margin: 0;
+        background-color: #fff;
+        overflow: auto;
+        padding: 20px 0; }
+        /* line 384, settings.scss */
+        #tabs-create-group #input_area_create_group .group_items_left ul.sortable_box li,
+        #tabs-create-group #input_area_create_group .group_items_right ul.sortable_box li,
+        #tabs-create-group #input_area_group_edit .group_items_left ul.sortable_box li,
+        #tabs-create-group #input_area_group_edit .group_items_right ul.sortable_box li,
+        #tabs-edit-group #input_area_create_group .group_items_left ul.sortable_box li,
+        #tabs-edit-group #input_area_create_group .group_items_right ul.sortable_box li,
+        #tabs-edit-group #input_area_group_edit .group_items_left ul.sortable_box li,
+        #tabs-edit-group #input_area_group_edit .group_items_right ul.sortable_box li {
+          font-size: 20px;
+          display: block;
+          position: relative;
+          margin: auto 10px 12px 10px;
+          padding: 12px 8px 12px 40px;
+          border: 1px solid #444;
+          border-radius: 4px; }
+          /* line 392, settings.scss */
+          #tabs-create-group #input_area_create_group .group_items_left ul.sortable_box li span,
+          #tabs-create-group #input_area_create_group .group_items_right ul.sortable_box li span,
+          #tabs-create-group #input_area_group_edit .group_items_left ul.sortable_box li span,
+          #tabs-create-group #input_area_group_edit .group_items_right ul.sortable_box li span,
+          #tabs-edit-group #input_area_create_group .group_items_left ul.sortable_box li span,
+          #tabs-edit-group #input_area_create_group .group_items_right ul.sortable_box li span,
+          #tabs-edit-group #input_area_group_edit .group_items_left ul.sortable_box li span,
+          #tabs-edit-group #input_area_group_edit .group_items_right ul.sortable_box li span {
+            padding-left: 20px; }
+
+/*# sourceMappingURL=settings.css.map */

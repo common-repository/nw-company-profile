@@ -1,0 +1,399 @@
+@charset "utf-8";
+
+.ui-tabs-active a {
+  background-color: #f1f1f1;
+}
+
+/*-----------------------------------
+
+基本情報の設定
+
+-----------------------------------*/
+
+.profile_box {
+  display: inline-block;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#subTitle_area {
+  width: 200px;
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+#input_area {
+  background: #f1f1f1;
+  width: 100%;
+}
+
+.company_profile,
+.profile_title {
+  display: inline-block;
+  display: flex;
+  border-bottom: #eee solid 1px;
+  margin: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.company_profile {
+  &:last-child {
+    border-bottom: 0;
+  }
+  &:active {
+    /*ドラッグ&ドロップ操作中時の設定*/
+    background: #fffef4;
+  }
+}
+
+.ui-sortable-handle {
+  cursor: move;
+}
+
+.slug,
+.slug_title {
+  border-right: #eee solid 1px;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  /*上下センターに*/
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 20px 0;
+}
+
+.contents,
+.contents_title {
+  /*上下センターに*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border-right: #eee solid 1px;
+  padding: 20px 0;
+  flex: 5;
+}
+
+.textarea_type,
+.company_profile input[type="text"] {
+  display: inline-block;
+  width: calc(100% - 30px);
+}
+
+.profile_title {
+  background: #e5e5e5;
+  display: inline-block;
+  display: flex;
+  height: 3em;
+  width: 100%;
+  margin: 0 auto;
+  &:first-child {
+    margin-top: 1em;
+  }
+}
+
+.delete_title {
+  padding: 0 15px;
+  width: 50px;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input[type="checkbox"] {
+    margin: 0 4px 0 0;
+  }
+}
+
+.label,
+.label_title,
+.draft .label {
+  border-right: #eee solid 1px;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  /*上下センターに*/
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  padding: 20px 0;
+}
+
+.blank_area {
+  /*空白行の設定*/
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  width: 50px;
+}
+
+/*ナビのタブ切り替え設定*/
+
+.ui-tabs-nav {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding-top: 9px;
+  padding-bottom: 0;
+  line-height: inherit;
+}
+
+.ui-tabs-anchor {
+  display: block;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  margin-left: 0.5em;
+  margin-bottom: -1px;
+  padding: 3px 10px;
+  font-size: 14px;
+  line-height: 1.71428571;
+  font-weight: 600;
+  background: #e5e5e5;
+  color: #555;
+  text-decoration: none;
+  white-space: nowrap;
+  &:active,
+  &:focus,
+  &:focus:active,
+  &:after {
+    border-bottom: 1px solid #f1f1f1;
+    background: #f1f1f1;
+    color: #000;
+    box-shadow: 0;
+    outline: 0;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.ui-state-default {
+  margin-bottom: 0;
+}
+
+/*追加フォームエリアの設定*/
+
+.check_all_area {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  width: 50px;
+  position: relative;
+  input[type="checkbox"] {
+    margin-top: 0;
+  }
+  #text {
+    display: none;
+  }
+}
+
+.trash-icon {
+  font-size: 16px;
+  font-weight: 900;
+  content: "\f2ed";
+  color: #c0c0c0;
+  padding-left: 2px;
+  padding-bottom: 2px;
+}
+
+/*追加フォームボタンの設定*/
+
+.draft {
+  .slug {
+    display: block;
+    align-self: center;
+    border: 0;
+  }
+  .contents {
+    padding: 20px 0;
+    border-left: #eee solid 1px;
+  }
+  &:active {
+    /* ドラッグ&ドロップ操作中時の設定をリセット */
+    background: #fff;
+  }
+}
+
+.add_area {
+  position: relative;
+}
+
+.btn_box {
+  position: absolute;
+  padding-top: 8px;
+  padding-left: 10px;
+  border-top: 1px solid #ccc;
+  border-top: 1px solid #eee;
+  width: 100%;
+}
+
+.add_form_btn,
+.rm_form_btn {
+  position: relative;
+  width: 30px;
+  input {
+    visibility: hidden;
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+.add_form_btn {
+  &::after {
+    display: inline-block;
+    position: absolute;
+    left: 7px;
+    top: 0;
+    font-family: "Font Awesome 5 Free";
+    content: "\f055";
+    font-weight: 900;
+    color: #9a9a9a;
+    font-size: 14px;
+  }
+  &:hover::after {
+    color: #444;
+  }
+}
+
+.rm_form_btn {
+  &::after {
+    display: inline-block;
+    position: absolute;
+    left: 3px;
+    top: 0;
+    font-family: "Font Awesome 5 Free";
+    content: "\f057";
+    font-weight: 900;
+    color: #9a9a9a;
+    font-size: 14px;
+  }
+  &:hover::after {
+    color: #444;
+  }
+}
+
+.draft_label,
+.draft_slug,
+.draft_contents {
+  margin-top: 20px;
+}
+
+input .draft_slug {
+  display: flex;
+}
+
+.notice {
+  /*同スラッグアラート*/
+  display: inline-block;
+  padding: 8px 8px;
+  margin: 0;
+  background-color: #ca4a1f;
+  color: #fff;
+  font-weight: 600;
+  border: 0;
+  margin-top: 0;
+  text-align: center;
+  width: calc(100% - 45px);
+  .wrap & {
+    margin: 0;
+  }
+}
+
+/*-----------------------------------
+
+グループの作成・編集
+
+-----------------------------------*/
+
+#tabs-create-group,
+#tabs-edit-group {
+  width: calc(100% - 40px);
+  position: relative;
+  padding: 20px;
+  max-width: 1200px;
+  #select_group_form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .group_header {
+    .group_inner {
+      height: 30px;
+      margin-bottom: 8px;
+      span {
+        padding-right: 20px;
+      }
+      .notice {
+        display: inline;
+        margin-left: 20px;
+      }
+      span.no_input {
+        padding-left: 10px;
+      }
+    }
+  }
+  #input_area_create_group,
+  #input_area_group_edit {
+    height: 55vh;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    .group_items_arrow {
+      height: 100%;
+      flex: 1;
+      max-width: 50px;
+      font-size: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #444;
+      padding: 0 20px;
+    }
+    .group_items_left,
+    .group_items_right {
+      height: 100%;
+      flex: 2;
+      p.group_title {
+        height: 40px;
+        width: 100%;
+        background-color: #e5e5e5;
+        display: flex;
+        margin: 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      ul.sortable_box {
+        height: calc(100% - 80px);
+        width: 100%;
+        margin: 0;
+        background-color: #fff;
+        overflow: auto;
+        padding: 20px 0;
+        li {
+          font-size: 20px;
+          display: block;
+          position: relative;
+          margin: auto 10px 12px 10px;
+          padding: 12px 8px 12px 40px;
+          border: 1px solid #444;
+          border-radius: 4px;
+          span {
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
